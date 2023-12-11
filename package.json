@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "author": "Devias",
   "licence": "MIT",
-  "homepage": "https://devias.io",
+  "homepage": "https://flovalle.github.io/vectis-frontend",
   "private": false,
   "scripts": {
     "dev": "next",
