@@ -1,4 +1,4 @@
 module.exports = {
   reactStrictMode: true,
-  basePath: '/vectis-frontend'
+  assetPrefix: '/vectis-frontend',
 };
