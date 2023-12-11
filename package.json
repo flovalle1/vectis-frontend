@@ -7,7 +7,9 @@
   "private": false,
   "scripts": {
     "dev": "next",
+    "deploy": "gh-pages -d ghpages",
     "build": "next build",
+    "predeploy": "next build && next export && mv out ghpages && touch ghpages/.nojekyll",
     "start": "next start",
     "export": "next build && next export",
     "lint": "next lint",
@@ -26,6 +28,7 @@
     "apexcharts": "3.37.0",
     "date-fns": "2.29.3",
     "formik": "2.2.9",
+    "gh-pages": "^6.1.0",
     "next": "13.1.6",
     "nprogress": "0.2.0",
     "prop-types": "15.8.1",
