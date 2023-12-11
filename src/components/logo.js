@@ -6,7 +6,7 @@ export const Logo = () => {
 
   return (
     <img
-      src="${process.env.PUBLIC_URL}/assets/logos/logo-vectis.png"
+      src="vectis-frontened/assets/logos/logo-vectis.png"
       alt="Logo"
       style={{
         width: 'auto',
