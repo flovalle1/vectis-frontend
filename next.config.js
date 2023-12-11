@@ -1,4 +1,7 @@
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
   reactStrictMode: true,
-  assetPrefix: '/vectis-frontend',
+  basePath: isProduction ? '/vectis-frontend' : '',
+  assetPrefix: isProduction ? '/vectis-frontend/' : '',
 };
