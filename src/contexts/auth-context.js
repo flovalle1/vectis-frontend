@@ -84,8 +84,8 @@ export const AuthProvider = (props) => {
       const user = {
         id: '5e86809283e28b96d2d38537',
         avatar: '/assets/avatars/avatar-anika-visser.png',
-        name: 'Anika Visser',
-        email: 'anika.visser@devias.io'
+        name: 'Florian Martel',
+        email: 'florian.martel@vectis-finance.de'
       };
 
       dispatch({
@@ -117,8 +117,8 @@ export const AuthProvider = (props) => {
     const user = {
       id: '5e86809283e28b96d2d38537',
       avatar: '/assets/avatars/avatar-anika-visser.png',
-      name: 'Anika Visser',
-      email: 'anika.visser@devias.io'
+      name: 'Florian Martel',
+      email: 'florian.martel@vectis-finance.de'
     };
 
     dispatch({
@@ -128,8 +128,8 @@ export const AuthProvider = (props) => {
   };
 
   const signIn = async (email, password) => {
-    if (email !== 'demo@devias.io' || password !== 'Password123!') {
-      throw new Error('Please check your email and password');
+    if (email !== 'info@vectis-finance.de' || password !== 'Password123!') {
+      throw new Error('Bitte überprüfe deine Email und Passwort');
     }
 
     try {
@@ -141,8 +141,8 @@ export const AuthProvider = (props) => {
     const user = {
       id: '5e86809283e28b96d2d38537',
       avatar: '/assets/avatars/avatar-anika-visser.png',
-      name: 'Anika Visser',
-      email: 'anika.visser@devias.io'
+      name: 'Florian Martel',
+      email: 'florian.martel@vectis-finance.de'
     };
 
     dispatch({
@@ -152,7 +152,7 @@ export const AuthProvider = (props) => {
   };
 
   const signUp = async (email, name, password) => {
-    throw new Error('Sign up is not implemented');
+    throw new Error('Diese Funktion ist noch nicht implementiert');
   };
 
   const signOut = () => {

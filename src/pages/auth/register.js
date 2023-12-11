@@ -73,13 +73,13 @@ const Page = () => {
               sx={{ mb: 3 }}
             >
               <Typography variant="h4">
-                Register
+                Registrieren
               </Typography>
               <Typography
                 color="text.secondary"
                 variant="body2"
               >
-                Already have an account?
+                Hast du bereits ein Konto?
                 &nbsp;
                 <Link
                   component={NextLink}
@@ -87,7 +87,7 @@ const Page = () => {
                   underline="hover"
                   variant="subtitle2"
                 >
-                  Log in
+                  Einloggen
                 </Link>
               </Typography>
             </Stack>
@@ -110,7 +110,7 @@ const Page = () => {
                   error={!!(formik.touched.email && formik.errors.email)}
                   fullWidth
                   helperText={formik.touched.email && formik.errors.email}
-                  label="Email Address"
+                  label="Email Addresse"
                   name="email"
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
@@ -121,7 +121,7 @@ const Page = () => {
                   error={!!(formik.touched.password && formik.errors.password)}
                   fullWidth
                   helperText={formik.touched.password && formik.errors.password}
-                  label="Password"
+                  label="Passwort"
                   name="password"
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
@@ -145,7 +145,7 @@ const Page = () => {
                 type="submit"
                 variant="contained"
               >
-                Continue
+                Jetzt Registrieren!
               </Button>
             </form>
           </div>

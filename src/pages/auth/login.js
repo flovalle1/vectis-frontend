@@ -25,20 +25,20 @@ const Page = () => {
   const [method, setMethod] = useState('email');
   const formik = useFormik({
     initialValues: {
-      email: 'demo@devias.io',
+      email: 'info@vectis-finance.de',
       password: 'Password123!',
       submit: null
     },
     validationSchema: Yup.object({
       email: Yup
         .string()
-        .email('Must be a valid email')
+        .email('Muss eine gültige Email sein')
         .max(255)
-        .required('Email is required'),
+        .required('Email ist erforderlich'),
       password: Yup
         .string()
         .max(255)
-        .required('Password is required')
+        .required('Passwort ist erforderlich')
     }),
     onSubmit: async (values, helpers) => {
       try {
@@ -103,7 +103,7 @@ const Page = () => {
                 color="text.secondary"
                 variant="body2"
               >
-                Don&apos;t have an account?
+                Du hast noch keinen Account?
                 &nbsp;
                 <Link
                   component={NextLink}
@@ -111,7 +111,7 @@ const Page = () => {
                   underline="hover"
                   variant="subtitle2"
                 >
-                  Register
+                  Jetzt Registrieren!
                 </Link>
               </Typography>
             </Stack>
@@ -121,11 +121,11 @@ const Page = () => {
               value={method}
             >
               <Tab
-                label="Email"
+                label="Email Login"
                 value="email"
               />
               <Tab
-                label="Phone Number"
+                label="Telefon Login"
                 value="phoneNumber"
               />
             </Tabs>
@@ -139,7 +139,7 @@ const Page = () => {
                     error={!!(formik.touched.email && formik.errors.email)}
                     fullWidth
                     helperText={formik.touched.email && formik.errors.email}
-                    label="Email Address"
+                    label="Email Addresse"
                     name="email"
                     onBlur={formik.handleBlur}
                     onChange={formik.handleChange}
@@ -150,7 +150,7 @@ const Page = () => {
                     error={!!(formik.touched.password && formik.errors.password)}
                     fullWidth
                     helperText={formik.touched.password && formik.errors.password}
-                    label="Password"
+                    label="Passwort"
                     name="password"
                     onBlur={formik.handleBlur}
                     onChange={formik.handleChange}
@@ -159,7 +159,7 @@ const Page = () => {
                   />
                 </Stack>
                 <FormHelperText sx={{ mt: 1 }}>
-                  Optionally you can skip.
+                  Testmodus. Es besteht noch kein Auth Service.
                 </FormHelperText>
                 {formik.errors.submit && (
                   <Typography
@@ -177,7 +177,7 @@ const Page = () => {
                   type="submit"
                   variant="contained"
                 >
-                  Continue
+                  Anmelden
                 </Button>
                 <Button
                   fullWidth
@@ -185,7 +185,7 @@ const Page = () => {
                   sx={{ mt: 3 }}
                   onClick={handleSkip}
                 >
-                  Skip authentication
+                  Anmeldung überspringen (Test-Modus)
                 </Button>
                 <Alert
                   color="primary"
@@ -193,7 +193,7 @@ const Page = () => {
                   sx={{ mt: 3 }}
                 >
                   <div>
-                    You can use <b>demo@devias.io</b> and password <b>Password123!</b>
+                    Benutze <b>info@vectis-finance.de</b> und das Passwort <b>Password123!</b> um dich einzuloggen. Du kannst andere Kombinationen nutzen, um den Error zu testen.
                   </div>
                 </Alert>
               </form>
@@ -204,10 +204,10 @@ const Page = () => {
                   sx={{ mb: 1 }}
                   variant="h6"
                 >
-                  Not available in the demo
+                  Noch nicht implementiert.
                 </Typography>
                 <Typography color="text.secondary">
-                  To prevent unnecessary costs we disabled this feature in the demo.
+                  Nicht implementiert.
                 </Typography>
               </div>
             )}

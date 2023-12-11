@@ -5,12 +5,13 @@ import ShoppingBagIcon from '@heroicons/react/24/solid/ShoppingBagIcon';
 import UserIcon from '@heroicons/react/24/solid/UserIcon';
 import UserPlusIcon from '@heroicons/react/24/solid/UserPlusIcon';
 import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
+import HomeIcon from '@heroicons/react/24/solid/HomeIcon';
 import XCircleIcon from '@heroicons/react/24/solid/XCircleIcon';
 import { SvgIcon } from '@mui/material';
 
 export const items = [
   {
-    title: 'Overview',
+    title: 'Dashboard',
     path: '/',
     icon: (
       <SvgIcon fontSize="small">
@@ -19,7 +20,7 @@ export const items = [
     )
   },
   {
-    title: 'Customers',
+    title: 'Finanzierungsanfragen',
     path: '/customers',
     icon: (
       <SvgIcon fontSize="small">
@@ -28,11 +29,11 @@ export const items = [
     )
   },
   {
-    title: 'Companies',
+    title: 'Immobilien',
     path: '/companies',
     icon: (
       <SvgIcon fontSize="small">
-        <ShoppingBagIcon />
+        <HomeIcon />
       </SvgIcon>
     )
   },
@@ -46,14 +47,14 @@ export const items = [
     )
   },
   {
-    title: 'Settings',
+    title: 'Einstellungen',
     path: '/settings',
     icon: (
       <SvgIcon fontSize="small">
         <CogIcon />
       </SvgIcon>
     )
-  },
+  }/*,
   {
     title: 'Login',
     path: '/auth/login',
@@ -80,5 +81,5 @@ export const items = [
         <XCircleIcon />
       </SvgIcon>
     )
-  }
+  }*/
 ];

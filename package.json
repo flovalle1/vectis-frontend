@@ -6,7 +6,7 @@
   "homepage": "https://flovalle.github.io/vectis-frontend",
   "private": false,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "deploy": "gh-pages -d ghpages",
     "build": "next build",
     "predeploy": "next build && next export && mv out ghpages && touch ghpages/.nojekyll",

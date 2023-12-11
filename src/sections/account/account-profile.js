@@ -11,10 +11,10 @@ import {
 
 const user = {
   avatar: '/assets/avatars/avatar-anika-visser.png',
-  city: 'Los Angeles',
-  country: 'USA',
+  city: 'Tübingen',
+  country: 'Deutschland',
   jobTitle: 'Senior Developer',
-  name: 'Anika Visser',
+  name: 'Florian Martel',
   timezone: 'GTM-7'
 };
 
@@ -62,7 +62,7 @@ export const AccountProfile = () => (
         fullWidth
         variant="text"
       >
-        Upload picture
+       Bild hochladen
       </Button>
     </CardActions>
   </Card>
