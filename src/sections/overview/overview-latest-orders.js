@@ -15,7 +15,8 @@ import {
   TableBody,
   TableCell,
   TableHead,
-  TableRow
+  TableRow,
+  Tooltip
 } from '@mui/material';
 import { Scrollbar } from 'src/components/scrollbar';
 import { SeverityPill } from 'src/components/severity-pill';
@@ -87,23 +88,31 @@ export const OverviewLatestOrders = (props) => {
                       </SeverityPill>
                     </TableCell>
                     <TableCell>
-                    <Grid container spacing={0.5}>
-                        <Grid item xs = {6}>
-                        {order.status === 'finanzierbar' && (
+                      <Grid container spacing={0.5}>
+                        <Grid item xs={6}>
+                          {order.status === 'finanzierbar' && (
+                            <Tooltip title="Dokument downloaden" placement="top" arrow>
                               <IconButton edge="end" >
                                 <SvgIcon>
                                   <DocumentArrowDownIcon />
                                 </SvgIcon>
                               </IconButton>
-                            )}
-                        {!order.status && <div style={{ width: 48, height: 48 }}></div>}
+                            </Tooltip>
+                          )}
+                          {!order.status && <div style={{ width: 48, height: 48 }}></div>}
                         </Grid>
-                        <Grid item xs = {6}>
-                              <IconButton edge="end" >
-                                <SvgIcon style={{ ':hover': { backgroundColor: 'red' } }}>
-                                  <ArchiveBoxXMarkIcon />
-                                </SvgIcon>
-                              </IconButton>
+                        <Grid item xs={6}>
+                          <Tooltip title="Archivieren" placement="top" arrow>
+                            <IconButton edge="end" sx={{
+                              ':hover': {
+                                color: 'red',
+                              },
+                            }}>
+                              <SvgIcon >
+                                <ArchiveBoxXMarkIcon />
+                              </SvgIcon>
+                            </IconButton>
+                          </Tooltip>
                         </Grid>
                       </Grid>
                     </TableCell>
