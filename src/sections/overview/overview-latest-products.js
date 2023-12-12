@@ -2,6 +2,9 @@ import { formatDistanceToNow } from 'date-fns';
 import PropTypes from 'prop-types';
 import ArrowRightIcon from '@heroicons/react/24/solid/ArrowRightIcon';
 import EllipsisVerticalIcon from '@heroicons/react/24/solid/EllipsisVerticalIcon';
+import DocumentArrowDownIcon from '@heroicons/react/24/solid/DocumentArrowDownIcon';
+import CustomIconButton from 'src/components/customiconbutton';
+
 import {
   Box,
   Button,
@@ -22,7 +25,7 @@ export const OverviewLatestProducts = (props) => {
 
   return (
     <Card sx={sx}>
-      <CardHeader title="Latest Products" />
+      <CardHeader title="Benachrichtigungen" />
       <List>
         {products.map((product, index) => {
           const hasDivider = index < products.length - 1;
@@ -65,11 +68,7 @@ export const OverviewLatestProducts = (props) => {
                 secondary={`Updated ${ago} ago`}
                 secondaryTypographyProps={{ variant: 'body2' }}
               />
-              <IconButton edge="end">
-                <SvgIcon>
-                  <EllipsisVerticalIcon />
-                </SvgIcon>
-              </IconButton>
+              <CustomIconButton />
             </ListItem>
           );
         })}
@@ -86,7 +85,7 @@ export const OverviewLatestProducts = (props) => {
           size="small"
           variant="text"
         >
-          View all
+          Alle ansehen
         </Button>
       </CardActions>
     </Card>
