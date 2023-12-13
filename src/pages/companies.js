@@ -20,11 +20,19 @@ const companies = [
   {
     id: '2569ce0d517a7f06d3ea1f24',
     createdAt: '27/03/2019',
-    description: 'Diese Komponente muss von Flo noch angepasst und designed werden.',
+    description: 'Genmütliche 3-Zimmer-Wohnung mit Balkon und Einbauküche in ruhiger Lage',
     logo: '/assets/logos/logo-vectis.png',
-    title: 'Immobilie 1',
+    title: '3-Zimmer-Wohnung',
     downloads: '594'
-  }
+  },
+  {
+    id: '2569ce0d517a7f06d3ea1f24',
+    createdAt: '27/03/2019',
+    description: 'Neubauwohnung mit 3 Zimmern und Balkon in ruhiger Lage in der Nähe des Zentrums und mit guter Verkehrsanbindung',
+    logo: '/assets/logos/logo-vectis.png',
+    title: 'Neubauwohnung',
+    downloads: '594'
+  },
 ];
 
 const Page = () => (
@@ -52,32 +60,6 @@ const Page = () => (
               <Typography variant="h4">
                 Immobilien
               </Typography>
-              <Stack
-                alignItems="center"
-                direction="row"
-                spacing={1}
-              >
-                <Button
-                  color="inherit"
-                  startIcon={(
-                    <SvgIcon fontSize="small">
-                      <ArrowUpOnSquareIcon />
-                    </SvgIcon>
-                  )}
-                >
-                  Importieren
-                </Button>
-                <Button
-                  color="inherit"
-                  startIcon={(
-                    <SvgIcon fontSize="small">
-                      <ArrowDownOnSquareIcon />
-                    </SvgIcon>
-                  )}
-                >
-                  Exportieren
-                </Button>
-              </Stack>
             </Stack>
             <div>
               <Button
@@ -100,8 +82,8 @@ const Page = () => (
             {companies.map((company) => (
               <Grid
                 xs={12}
-                md={6}
-                lg={4}
+                md={12}
+                lg={12}
                 key={company.id}
               >
                 <CompanyCard company={company} />
