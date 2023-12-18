@@ -21,7 +21,7 @@ const companies = [
     id: '2569ce0d517a7f06d3ea1f24',
     createdAt: '27/03/2019',
     description: 'Genmütliche 3-Zimmer-Wohnung mit Balkon und Einbauküche in ruhiger Lage',
-    logo: '/assets/logos/logo-vectis.png',
+    logo: 'https://flovalle1.github.io/vectis-frontend/assets/logos/logo-vectis.png',
     title: '3-Zimmer-Wohnung',
     downloads: '594'
   },
@@ -29,7 +29,7 @@ const companies = [
     id: '2569ce0d517a7f06d3ea1f24',
     createdAt: '27/03/2019',
     description: 'Neubauwohnung mit 3 Zimmern und Balkon in ruhiger Lage in der Nähe des Zentrums und mit guter Verkehrsanbindung',
-    logo: '/assets/logos/logo-vectis.png',
+    logo: 'https://flovalle1.github.io/vectis-frontend/assets/logos/logo-vectis.png',
     title: 'Neubauwohnung',
     downloads: '594'
   },

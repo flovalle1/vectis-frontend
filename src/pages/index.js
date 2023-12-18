@@ -73,25 +73,25 @@ const Page = () => (
               products={[
                 {
                   id: '5ece2c077e39da27658aa8a9',
-                  image: '/assets/logos/commerzbank-logo.png',
+                  image: 'https://flovalle1.github.io/vectis-frontend/assets/logos/commerzbank-logo.png',
                   name: 'Commerzbank Finanzierungsbestätigung',
                   updatedAt: subHours(now, 6).getTime()
                 },
                 {
                   id: '5ece2c0d16f70bff2cf86cd8',
-                  image: '/assets/logos/deutschebank-logo.png',
+                  image: 'https://flovalle1.github.io/vectis-frontend/assets/logos/deutschebank-logo.png',
                   name: 'Deutsche Bank Rückfragen',
                   updatedAt: subDays(subHours(now, 8), 2).getTime()
                 },
                 {
                   id: 'b393ce1b09c1254c3a92c827',
-                  image: '/assets/logos/deutschebank-logo.png',
+                  image: 'https://flovalle1.github.io/vectis-frontend/assets/logos/deutschebank-logo.png',
                   name: 'Deutsche Bank Antragsbestätigung',
                   updatedAt: subDays(subHours(now, 1), 1).getTime()
                 },
                 {
                   id: 'a6ede15670da63f49f752c89',
-                  image: '/assets/logos/commerzbank-logo.png',
+                  image: 'https://flovalle1.github.io/vectis-frontend/assets/logos/commerzbank-logo.png',
                   name: 'Commerzbank Ablehnung',
                   updatedAt: subDays(subHours(now, 3), 3).getTime()
                 }
