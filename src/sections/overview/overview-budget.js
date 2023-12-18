@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import ArrowDownIcon from '@heroicons/react/24/solid/ArrowDownIcon';
 import ArrowUpIcon from '@heroicons/react/24/solid/ArrowUpIcon';
 import CurrencyDollarIcon from '@heroicons/react/24/solid/CurrencyDollarIcon';
+import ReceiptPercentIcon from '@heroicons/react/24/solid/ReceiptPercentIcon';
 import { Avatar, Card, CardContent, Stack, SvgIcon, Typography } from '@mui/material';
 
 export const OverviewBudget = (props) => {
@@ -21,7 +22,7 @@ export const OverviewBudget = (props) => {
               color="text.secondary"
               variant="overline"
             >
-              Budget
+              Durchschnitts-Zins
             </Typography>
             <Typography variant="h4">
               {value}
@@ -35,7 +36,7 @@ export const OverviewBudget = (props) => {
             }}
           >
             <SvgIcon>
-              <CurrencyDollarIcon />
+              <ReceiptPercentIcon />
             </SvgIcon>
           </Avatar>
         </Stack>
@@ -55,7 +56,7 @@ export const OverviewBudget = (props) => {
                 color={positive ? 'success' : 'error'}
                 fontSize="small"
               >
-                {positive ? <ArrowUpIcon /> : <ArrowDownIcon />}
+                {positive ? <ArrowDownIcon /> : <ArrowUpIcon />}
               </SvgIcon>
               <Typography
                 color={positive ? 'success.main' : 'error.main'}
@@ -68,7 +69,7 @@ export const OverviewBudget = (props) => {
               color="text.secondary"
               variant="caption"
             >
-              Since last month
+              Dieses Quartal
             </Typography>
           </Stack>
         )}

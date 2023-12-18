@@ -17,7 +17,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        Overview | Devias Kit
+        Overview | Vectis Finance
       </title>
     </Head>
     <Box
@@ -28,6 +28,38 @@ const Page = () => (
       }}
     >
       <Container maxWidth="xl">
+        <Grid container spacing={3}>
+          <Grid xs={3}>
+            <OverviewTotalProfit
+              sx={{ height: '100%' }}
+              value="1.500.000€"
+            />
+
+          </Grid>
+          <Grid xs={3}>
+            <OverviewTotalCustomers
+              difference={16}
+              positive={true}
+              sx={{ height: '100%' }}
+              value="78"
+            />
+          </Grid>
+          <Grid xs={3}>
+            <OverviewTasksProgress
+              sx={{ height: '100%' }}
+              value="37 Tage"
+            />
+          </Grid>
+          <Grid xs={3}>
+            <OverviewBudget
+              difference={12}
+              positive
+              sx={{ height: '100%' }}
+              value="4%"
+            />
+          </Grid>
+
+        </Grid>
         <Grid
           container
           spacing={3}

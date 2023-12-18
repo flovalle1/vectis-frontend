@@ -10,6 +10,7 @@ import {
   SvgIcon,
   Typography
 } from '@mui/material';
+import CalendarDaysIcon from '@heroicons/react/24/solid/CalendarDaysIcon';
 
 export const OverviewTasksProgress = (props) => {
   const { value, sx } = props;
@@ -29,10 +30,10 @@ export const OverviewTasksProgress = (props) => {
               gutterBottom
               variant="overline"
             >
-              Task Progress
+              Durch. Finanzierungsdauer
             </Typography>
             <Typography variant="h4">
-              {value}%
+              {value}
             </Typography>
           </Stack>
           <Avatar
@@ -43,16 +44,16 @@ export const OverviewTasksProgress = (props) => {
             }}
           >
             <SvgIcon>
-              <ListBulletIcon />
+              <CalendarDaysIcon />
             </SvgIcon>
           </Avatar>
         </Stack>
-        <Box sx={{ mt: 3 }}>
+        {/* <Box sx={{ mt: 3 }}>
           <LinearProgress
             value={value}
             variant="determinate"
           />
-        </Box>
+        </Box> */}
       </CardContent>
     </Card>
   );
