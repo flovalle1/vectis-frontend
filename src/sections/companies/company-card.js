@@ -9,17 +9,52 @@ import { Step, StepLabel, Stepper } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 import Item from '@mui/material/Grid';
+import * as React from 'react';
+import { Button, StepContent } from '@mui/material';
 
 export const CompanyCard = (props) => {
   const { company } = props;
 
-  const steps = ['Daten anfordern', 'Finanzierungsberater kontaktieren', 'Notartermin'];
+  // const steps = ['Daten anfordern', 'Finanzierungsberater kontaktieren', 'Notartermin'];
   const Img = styled('img')({
     margin: 'auto',
     display: 'flex',
     maxWidth: '100%',
     maxHeight: '100%',
   });
+
+
+  const steps = [
+    {
+      label: 'Besichtigung',
+      description: `Die Immobilie wird besichtigt`,
+    },
+    {
+      label: 'Finanzierung',
+      description:
+        'Die Finanzierung wird angefordert.',
+    },
+    {
+      label: 'Abschluss',
+      description: `Es entsteht Umatz.`,
+    },
+  ];
+  const [activeStep, setActiveStep] = React.useState(0);
+
+  // export default function VerticalLinearStepper() {
+  //   const [activeStep, setActiveStep] = React.useState(0);
+
+  //   const handleNext = () => {
+  //     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  //   };
+
+  //   const handleBack = () => {
+  //     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  //   };
+
+  //   const handleReset = () => {
+  //     setActiveStep(0);
+  //   };
 
 
   return (
@@ -39,7 +74,7 @@ export const CompanyCard = (props) => {
           <CardContent sx={{ width: '100%' }}>
             <Grid container spacing={2} >
 
-              <Grid item xs={4} >
+              <Grid item xs={3} >
                 <Item sx={{ width: 250, height: 100 }}>
                   <Img
                     src={company.logo}
@@ -47,7 +82,7 @@ export const CompanyCard = (props) => {
                 </Item>
               </Grid>
 
-              <Grid item xs={7}>
+              <Grid item xs={4}>
                 <Typography variant="body2" color="grey">
                   ID: 1030114
                 </Typography>
@@ -62,8 +97,21 @@ export const CompanyCard = (props) => {
                 >
                   {company.description}
                 </Typography>
-
-
+              </Grid>
+              <Grid item xs={4}>
+                <Stepper activeStep={activeStep} orientation="vertical">
+                  {steps.map((step, index) => (
+                    <Step key={step.label}>
+                      <StepLabel
+                      >
+                        {step.label}
+                      </StepLabel>
+                      <StepContent>
+                        <Typography>{step.description}</Typography>
+                      </StepContent>
+                    </Step>
+                  ))}
+                </Stepper>
               </Grid>
               <Grid item xs={1}>
                 <Typography variant="subtitle1" component="div">
@@ -91,13 +139,13 @@ export const CompanyCard = (props) => {
             ))}
           </Grid>
 
-          <Stepper activeStep={1} alternativeLabel sx={{ pt: 5 }}>
+          {/* <Stepper activeStep={1} alternativeLabel sx={{ pt: 5 }}>
             {steps.map((label) => (
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>
               </Step>
             ))}
-          </Stepper>
+          </Stepper> */}
         </AccordionDetails>
       </Accordion>
 
