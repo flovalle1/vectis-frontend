@@ -175,7 +175,7 @@ export const CompanyCard = (props) => {
             display="inline"
             variant="body2"
           >
-            Vor 2 Stunden hinzugefügt
+            2 Angaben vervollständigen
           </Typography>
         </Stack>
         <Stack
@@ -194,7 +194,7 @@ export const CompanyCard = (props) => {
             display="inline"
             variant="body2"
           >
-            {company.downloads} Downloads
+            {company.downloads} Dokumente 
           </Typography>
         </Stack>
       </Stack>
